@@ -1,0 +1,294 @@
+@charset "UTF-8";
+/* Base  */
+@import url(https://fonts.googleapis.com/css?family=Anton|Bevan|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap);
+@font-face {
+  font-family: "AMX-Bold";
+  src: url("../fonts/AMX-Bold.eot?") format("eot"), url("../fonts/AMX-Bold.woff2") format("woff2"), url("../fonts/AMX-Bold.woff") format("woff"), url("../fonts/AMX-Bold.ttf") format("truetype"), url("../fonts/AMX-Bold.svg#AMX-Bold") format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "AMX-Regular";
+  src: url("../fonts/AMX-Regular.eot?") format("eot"), url("../fonts/AMX-Regular.woff2") format("woff2"), url("../fonts/AMX-Regular.woff") format("woff"), url("../fonts/AMX-Regular.ttf") format("truetype"), url("../fonts/AMX-Regular.svg#AMX-Regular") format("svg");
+  font-display: swap;
+}
+/******************** variables ********************/
+/*$breakpoints: (
+  movil  		: 480px,
+  movil-h 	: 640px,
+  tablet 		: 769px,
+  tablet-h  : 1025px,
+  tablet-w  : 1344px,
+  laptop  	: 1367px
+);*/
+/*$path: "https://static.claro.com.pe/landings/havas/2022/dco/v2/assets";
+$path-netflix: "https://static.claro.com.pe/landings/havas/2022/dco/v2/assets/banners/netflix";
+$path-fibraoptica: "https://static.claro.com.pe/landings/havas/2022/dco/v2/assets/banners/fibraoptica";*/
+/*.color($color: 'null'){
+
+	.color_atributos1 ($color) when (iscolor($color)) {
+			 color: $color;
+		}
+
+		.color_atributos1($color);
+}*/
+/*@mixin fondo-degrade($direccion: left,$inicio: #ffffff,$fin: #000000) {
+		background-color: $inicio;
+		background-image: -webkit-linear-gradient($direccion, $inicio, $fin);
+		background-image: -moz-linear-gradient($direccion, $inicio, $fin);
+		background-image: -o-linear-gradient($direccion, $inicio, $fin);
+		background-image: -ms-linear-gradient($direccion, $inicio, $fin);
+		background-image: linear-gradient($direccion, $inicio, $fin);
+}*/
+/*
+
+.sample {
+		font-size: 30rem;
+
+		@include breakpoint(medium) {
+				font-size: 22rem;
+		}
+}
+
+
+.element {
+		font-size: 30rem;
+}
+
+@media (min-width: 992px) {
+		.element {
+				font-size: 22rem;
+		}
+}
+
+*/
+html {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+ul, li {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+
+dl, dd, dt {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+
+table, td {
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border: 0 none;
+}
+
+a, a:hover {
+  outline: medium none;
+  text-decoration: none;
+}
+
+br {
+  clear: both;
+}
+
+form, fieldset {
+  border: 0 none;
+  margin: 0;
+  padding: 0;
+}
+
+footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.icon::before {
+  display: inline-block;
+  margin-right: 0.5em;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.globo {
+  padding: 10px;
+  width: 220px;
+  border­radius: 10px;
+  background­color: #8f0;
+  font­family: "trebuchet ms", tahoma, verdana, sans­serif;
+  font­size: 1.4em;
+}
+.globo:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border­bottom: 30px solid #8f0;
+  border­right: 20px solid transparent;
+  border­left: 20px solid transparent;
+  margin: ­30px 0 0 90px;
+}
+
+/* Flexbox */
+/*@mixin flex {
+  display:-webkit-box;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display:flex;
+}
+
+@mixin flex-direction($direction) {
+  -webkit-flex-direction:$direction;
+  -moz-flex-direction:$direction;
+  -ms-flex-direction:$direction;
+  flex-direction:$direction;
+}
+
+@mixin flex-wrap($wrap) {
+  -webkit-flex-wrap:$wrap;
+  -moz-flex-wrap:$wrap;
+  -ms-flex-wrap:$wrap;
+  flex-wrap:$wrap;
+}
+
+@mixin flex-align-items($align) {
+  -webkit-flex-align:$align;
+  -moz-flex-align:$align;
+  -ms-flex-align:$align;
+  -webkit-align-items:$align;
+  -webkit-box-align:$align;
+  align-items:$align;
+}
+
+@mixin flex-justify-content($justify) {
+  -webkit-justify-content:$justify;
+  -moz-justify-content:$justify;
+  -ms-justify-content:$justify;
+  justify-content:$justify;
+}
+
+@mixin flex-grow($grow) {
+  -webkit-flex-grow:$grow;
+  -moz-flex-grow:$grow;
+  -ms-flex-grow:$grow;
+  flex-grow:$grow;
+}
+
+@mixin flex-order($order) {
+  -webkit-box-ordinal-group:$order;
+  -moz-box-ordinal-group:$order;
+  -ms-flex-order:$order;
+  -webkit-order:$order;
+  order:$order;
+}
+
+@mixin align-self($align) {
+  -webkit-align-self: $align;
+  -moz-align-self: $align;
+  -ms-align-self: $align;
+  align-self: $align;
+}*/
+.layout__main {
+  max-width: 1024px;
+  width: 100%;
+  margin: 6rem auto;
+}
+.layout__main .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  border-bottom: 3px solid #acacac;
+  text-align: center;
+}
+.layout__main .menu__item {
+  width: 20%;
+  padding: 12px;
+}
+.layout__main .menu__item.active {
+  border-bottom: 6px solid red;
+  margin-bottom: -3px;
+}
+.layout__main .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 30px;
+}
+.layout__main .content__item {
+  max-width: 300px;
+  width: 100%;
+  margin: 30px;
+  padding: 0 50px 20px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px 2px rgba(156, 156, 156, 0.56);
+  -webkit-box-shadow: 0px 0px 10px 2px rgba(156, 156, 156, 0.56);
+  -moz-box-shadow: 0px 0px 10px 2px rgba(156, 156, 156, 0.56);
+}
+.layout__main .content__item .text {
+  margin-bottom: 100px;
+}
+.layout__main .content__item .text span {
+  padding: 4px 10px;
+  background: #01adc1;
+  color: #fff;
+  border-radius: 0 0 6px 6px;
+  font-size: 12px;
+}
+.layout__main .content__item .text h2 {
+  padding: 15px 0 5px;
+}
+.layout__main .content__item .text p {
+  font-size: 14px;
+}
+.layout__main .content__item .text h1, .layout__main .content__item .text hr {
+  margin: 20px 0;
+}
+.layout__main .content__item .redes {
+  width: 100%;
+  border-radius: 15px;
+  background-color: #fcb827;
+  padding: 15px 40px;
+}
+.layout__main .content__item .redes img.redes__logo {
+  width: 20px;
+}
+.layout__main .content__item .redes p {
+  font-size: 14px;
+  color: #494949;
+}
+
+/******************************************/

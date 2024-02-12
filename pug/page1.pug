@@ -1,0 +1,23 @@
+extends includes/master
+
+block vars
+	- var script = 1;
+	- var css = 1;
+	- var title = 'Project Structure';
+	- var modal = 1;
+
+block content
+	.page1
+		.page1__header
+			.portlet1
+				.portlet1__align
+					.zone1
+						.zone1__main
+							.content
+								.content__header
+									hgroup
+										h2 
+											| Project Structure
+
+block javascript	
+	script(src=path+"js/main.js")
